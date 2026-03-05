@@ -1,0 +1,68 @@
+---
+layout: default
+title: 首页
+---
+
+<div class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-description">{{ site.description }}</p>
+    <div class="hero-actions">
+      <a href="#posts" class="btn btn-primary">开始阅读</a>
+      <a href="/about" class="btn btn-secondary">关于我</a>
+    </div>
+  </div>
+  <div class="hero-decoration">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  </div>
+</div>
+
+<section id="posts" class="posts-section">
+  <div class="container">
+    <h2 class="section-title">最新文章</h2>
+    
+    <div class="posts-grid">
+      {% for post in site.posts limit:6 %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card-link">
+          <div class="post-card-meta">
+            <span class="post-category">{{ post.categories | first | default: '未分类' }}</span>
+            <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+          </div>
+          <h3 class="post-card-title">{{ post.title }}</h3>
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <div class="post-card-footer">
+            <span class="read-more">阅读全文 <span class="arrow">→</span></span>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size > 6 %}
+    <div class="view-all">
+      <a href="/archive" class="btn btn-outline">查看全部文章</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="categories-section">
+  <div class="container">
+    <h2 class="section-title">文章分类</h2>
+    <div class="categories-grid">
+      <a href="/categories/tech" class="category-card">
+        <div class="category-icon">💻</div>
+        <h3>技术</h3>
+        <p>编程、架构、工具与最佳实践</p>
+      </a>
+      <a href="/categories/life" class="category-card">
+        <div class="category-icon">💭</div>
+        <h3>思考</h3>
+        <p>人生感悟、读书笔记、随笔</p>
+      </a>
+    </div>
+  </div>
+</section>

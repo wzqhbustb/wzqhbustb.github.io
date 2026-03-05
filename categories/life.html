@@ -1,0 +1,24 @@
+---
+layout: page
+title: 思考
+---
+
+<div class="posts-section">
+  <div class="posts-grid">
+    {% for post in site.categories.life %}
+    <article class="post-card">
+      <a href="{{ post.url | relative_url }}" class="post-card-link">
+        <div class="post-card-meta">
+          <span class="post-category">{{ post.categories | first }}</span>
+          <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        </div>
+        <h3 class="post-card-title">{{ post.title }}</h3>
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <div class="post-card-footer">
+          <span class="read-more">阅读全文 <span class="arrow">→</span></span>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+</div>

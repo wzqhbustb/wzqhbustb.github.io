@@ -1,0 +1,21 @@
+---
+layout: page
+title: 文章归档
+description: 所有文章的列表
+---
+
+<div class="archive">
+  <ul class="archive-list">
+    {% for post in site.posts %}
+      {% assign current_year = post.date | date: "%Y" %}
+      {% if current_year != year %}
+        {% assign year = current_year %}
+        <li class="archive-year">{{ year }}</li>
+      {% endif %}
+      <li class="archive-item">
+        <span class="archive-date">{{ post.date | date: "%m月%d日" }}</span>
+        <a href="{{ post.url | relative_url }}" class="archive-title">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
