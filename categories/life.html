@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 思考
+title: Reflections
 ---
 
 <div class="posts-section">
@@ -10,12 +10,12 @@ title: 思考
       <a href="{{ post.url | relative_url }}" class="post-card-link">
         <div class="post-card-meta">
           <span class="post-category">{{ post.categories | first }}</span>
-          <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+          <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
         </div>
         <h3 class="post-card-title">{{ post.title }}</h3>
         <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
         <div class="post-card-footer">
-          <span class="read-more">阅读全文 <span class="arrow">→</span></span>
+          <span class="read-more">Read More <span class="arrow">→</span></span>
         </div>
       </a>
     </article>

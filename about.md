@@ -1,33 +1,33 @@
 ---
 layout: page
-title: 关于
-description: 了解我和我的博客
+title: About
+description: Learn more about me and this blog
 ---
 
-## 关于我
+## About Me
 
-你好！我是这个博客的作者。我是一名热爱技术的开发者，同时也对生活中的许多事物保持着好奇和思考。
+Hello! I'm the author of this blog. I'm a passionate developer who loves technology and maintains curiosity and thoughtful reflection about many aspects of life.
 
-我相信技术可以改变世界，但更重要的是技术背后的人性和思考。这个博客是我记录学习历程、分享技术见解、以及表达人生感悟的地方。
+I believe technology can change the world, but what's more important is the humanity and thought behind it. This blog is where I document my learning journey, share technical insights, and express my reflections on life.
 
-### 我的兴趣
+### My Interests
 
-- 💻 **编程与技术**：热爱探索新技术，追求优雅的代码设计
-- 📚 **阅读与学习**：保持终身学习的态度
-- 🌍 **思考与写作**：记录生活中的点滴感悟
-- 🎨 **设计与美学**：追求简洁而美好的事物
+- 💻 **Programming & Technology**: Exploring new technologies and pursuing elegant code design
+- 📚 **Reading & Learning**: Maintaining a lifelong learning attitude
+- 🌍 **Thinking & Writing**: Recording insights from daily life
+- 🎨 **Design & Aesthetics**: Pursuing simple and beautiful things
 
-### 联系方式
+### Contact
 
-如果你有任何问题或想法，欢迎通过以下方式联系我：
+If you have any questions or ideas, feel free to reach out:
 
 - 📧 Email: [your.email@example.com](mailto:your.email@example.com)
 - 💻 GitHub: [github.com/your-username](https://github.com/your-username)
 
 ---
 
-## 关于这个博客
+## About This Blog
 
-这个博客使用 [Jekyll](https://jekyllrb.com/) 构建，部署在 [GitHub Pages](https://pages.github.com/) 上。设计理念是**简约现代**，专注于内容的呈现，让读者能够专注于阅读本身。
+This blog is built with [Jekyll](https://jekyllrb.com/) and deployed on [GitHub Pages](https://pages.github.com/). The design philosophy is **minimalist and modern**, focusing on content presentation so readers can concentrate on reading itself.
 
-如果你对这个博客的构建方式感兴趣，可以在 GitHub 上查看源代码。
+If you're interested in how this blog is built, you can view the source code on GitHub.

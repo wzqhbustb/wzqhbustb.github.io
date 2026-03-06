@@ -1,130 +1,130 @@
 ---
 layout: post
-title: "编写整洁代码的原则与实践"
-description: "深入探讨代码整洁之道，分享编写可维护代码的核心原则"
+title: "Clean Code Principles and Practices"
+description: "An in-depth exploration of clean code, sharing core principles for writing maintainable code"
 date: 2024-03-10
 categories: [tech]
-tags: [编程, 代码质量, 最佳实践]
+tags: [programming, code-quality, best-practices]
 ---
 
-## 为什么代码质量很重要
+## Why Code Quality Matters
 
-> "任何傻瓜都能写出计算机可以理解的代码，好的程序员能写出人类可以理解的代码。" —— Martin Fowler
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." — Martin Fowler
 
-代码是写给人看的，只是恰好能被计算机执行。在软件开发的漫长生命周期中，代码被阅读的次数远远多于被编写的次数。因此，编写整洁、可读的代码是每个程序员的必修课。
+Code is written for humans to read, and only incidentally for computers to execute. Throughout the long lifecycle of software development, code is read far more often than it is written. Therefore, writing clean, readable code is a required course for every programmer.
 
-## 整洁代码的核心原则
+## Core Principles of Clean Code
 
-### 1. 有意义的命名
+### 1. Meaningful Names
 
-好的命名是自文档化的，它能清楚地表达意图：
+Good naming is self-documenting and clearly expresses intent:
 
 ```python
-# ❌ 不好的命名
-d = 30  # 经过的天数
+# ❌ Bad naming
+d = 30  # days passed
 
-# ✅ 好的命名
+# ✅ Good naming
 days_since_creation = 30
 ```
 
-命名原则：
-- 使用能揭示意图的名称
-- 避免误导性的名称
-- 做有意义的区分
-- 使用可搜索的名称
-- 避免使用编码（如类型前缀）
-- 类名应该是名词或名词短语
-- 方法名应该是动词或动词短语
+Naming principles:
+- Use intention-revealing names
+- Avoid misleading names
+- Make meaningful distinctions
+- Use searchable names
+- Avoid encodings (like type prefixes)
+- Class names should be nouns or noun phrases
+- Method names should be verbs or verb phrases
 
-### 2. 函数设计
+### 2. Function Design
 
-函数应该只做一件事，并且把它做好：
+Functions should do one thing and do it well:
 
 ```python
-# ❌ 不好的设计 - 一个函数做太多事
+# ❌ Bad design - a function doing too much
 def process_user_data(user):
     validate_user(user)
     save_to_database(user)
     send_welcome_email(user)
     update_analytics(user)
 
-# ✅ 好的设计 - 每个函数职责单一
+# ✅ Good design - each function has a single responsibility
 def validate_user(user):
-    # 只负责验证
+    # Only responsible for validation
     pass
 
 def save_user(user):
-    # 只负责保存
+    # Only responsible for saving
     pass
 
 def notify_user(user):
-    # 只负责通知
+    # Only responsible for notification
     pass
 ```
 
-函数设计原则：
-- 函数应该尽量短小
-- 函数应该只做一件事
-- 每个函数一个抽象层级
-- 使用描述性的名称
-- 函数参数最好少于 3 个
-- 避免副作用
+Function design principles:
+- Functions should be small
+- Functions should do one thing
+- Each function at one level of abstraction
+- Use descriptive names
+- Function parameters should ideally be fewer than 3
+- Avoid side effects
 
-### 3. 注释的艺术
+### 3. The Art of Comments
 
-代码应该是自解释的，注释用来解释"为什么"而不是"是什么"：
+Code should be self-explanatory. Comments should explain "why" rather than "what":
 
 ```python
-# ❌ 不好的注释 - 解释显而易见的代码
-i = i + 1  # 将 i 加 1
+# ❌ Bad comment - explaining the obvious
+i = i + 1  # increment i by 1
 
-# ✅ 好的注释 - 解释意图和背景
-# 需要加 1 因为数组索引从 0 开始，但用户期望从 1 开始显示
+# ✅ Good comment - explaining intent and context
+# Need to add 1 because array index starts at 0, but users expect display to start at 1
 i = i + 1
 ```
 
-### 4. 代码格式
+### 4. Code Formatting
 
-一致的格式让代码更易读：
+Consistent formatting makes code more readable:
 
-- 垂直格式：相关的代码应该靠近
-- 水平格式：保持合理的行长度
-- 团队遵循统一的代码规范
-- 使用自动化工具格式化代码
+- Vertical format: Related code should be close together
+- Horizontal format: Maintain reasonable line length
+- Teams should follow unified code standards
+- Use automated tools for code formatting
 
-## 实践建议
+## Practical Advice
 
-### 重构的代码坏味道
+### Code Smells for Refactoring
 
-要学会识别需要重构的信号：
+Learn to recognize signals that refactoring is needed:
 
-| 坏味道 | 症状 | 解决方案 |
-|--------|------|----------|
-| 重复代码 | 相同代码出现在多处 | 提取公共函数 |
-| 长函数 | 函数超过 20 行 | 拆分为小函数 |
-| 过大的类 | 类负责太多功能 | 拆分为多个类 |
-| 过长参数列表 | 函数参数超过 3 个 | 使用参数对象 |
-| 发散式变化 | 一个类因多种原因修改 | 分离职责 |
+| Smell | Symptom | Solution |
+|-------|---------|----------|
+| Duplicate Code | Same code appears in multiple places | Extract common functions |
+| Long Function | Function exceeds 20 lines | Break into smaller functions |
+| Large Class | Class has too many responsibilities | Split into multiple classes |
+| Long Parameter List | Function has more than 3 parameters | Use parameter objects |
+| Divergent Change | One class modified for different reasons | Separate responsibilities |
 
-### 持续改进
+### Continuous Improvement
 
-代码整洁是一个持续的过程：
+Clean code is a continuous process:
 
-1. **童子军规则**：离开营地时要比发现时更干净
-2. **代码审查**：通过同行评审发现问题
-3. **自动化测试**：确保重构不会破坏功能
-4. **持续学习**：阅读优秀的开源代码
+1. **Boy Scout Rule**: Leave the campground cleaner than you found it
+2. **Code Reviews**: Discover issues through peer review
+3. **Automated Testing**: Ensure refactoring doesn't break functionality
+4. **Continuous Learning**: Read excellent open source code
 
-## 总结
+## Summary
 
-整洁代码不是一蹴而就的，它需要时间、耐心和不断的练习。关键是培养对代码质量的敏感度，在每次编码时都问自己：
+Clean code is not achieved overnight. It requires time, patience, and constant practice. The key is to cultivate sensitivity to code quality, asking yourself every time you code:
 
-- 这段代码易于理解吗？
-- 如果 6 个月后回来看，我还能理解吗？
-- 其他开发者能轻松修改它吗？
+- Is this code easy to understand?
+- If I come back to it in 6 months, will I still understand it?
+- Can other developers easily modify it?
 
-保持对代码质量的追求，你将成为更好的程序员。
+Maintain the pursuit of code quality, and you will become a better programmer.
 
 ---
 
-希望这篇文章对你有帮助！如果你有任何问题或想法，欢迎在评论区交流。
+Hope this article helps you! If you have any questions or ideas, feel free to exchange in the comments.
