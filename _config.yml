@@ -6,7 +6,7 @@ email: "your.email@example.com"
 
 # Site URL (update after deploying to GitHub Pages)
 # baseurl: "/your-repo-name"  # Uncomment and modify if deploying to subdirectory
-url: "" # Your GitHub Pages URL, e.g., "https://username.github.io"
+url: "https://your-username.github.io" # Your GitHub Pages URL, update with your username
 
 # Build Settings
 markdown: kramdown

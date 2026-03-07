@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 平滑滚动
   initSmoothScroll();
+  
+  // 代码复制功能
+  initCodeCopy();
+  
+  // 图片懒加载
+  initLazyLoad();
 });
 
 // 移动端菜单
