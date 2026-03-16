@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lsm_tree_complete_guide.md",
+                "file": "lance_file_format_complete_analysis_en.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lsm_tree_complete_guide"
+              "title": "lance_file_format_complete_analysis_en"
             }
           }
         ]
@@ -185,10 +185,15 @@
   },
   "active": "94c9c06b63230044",
   "lastOpenFiles": [
+    "_posts/2026-03-16-lance-file-format-complete-analysis.md",
+    "Lance File Format Deep Analysis.md",
+    "lance_file_format_complete_analysis_en.md",
+    "lance_file_format_complete_analysis.md",
+    "lsm_tree_complete_guide.md",
+    "lance_file_format_chapter1_en.md",
     "_posts/2026-03-07-lsm-tree-complete-guide.md",
     "lsm_tree_guide_chapter1_english.md",
     "lsm_tree_guide_en.md",
-    "lsm_tree_complete_guide.md",
     "lsm_tree_complete_guide_en.md"
   ]
 }
