@@ -26,10 +26,4 @@ If you have any questions or ideas, feel free to reach out:
 - 📧 Email: [wy823034583@gmail.com](mailto:wy823034583@gmail.com)
 - 💻 GitHub: [github.com/wzqhbustb](https://github.com/wzqhbustb)
 
----
 
-## About This Blog
-
-This blog is built with [Jekyll](https://jekyllrb.com/) and deployed on [GitHub Pages](https://pages.github.com/). The design philosophy is **minimalist and modern**, focusing on content presentation so readers can concentrate on reading itself.
-
-If you're interested in how this blog is built, you can view the source code on GitHub.
