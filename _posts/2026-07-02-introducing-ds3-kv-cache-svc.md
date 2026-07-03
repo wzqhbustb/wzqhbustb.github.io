@@ -2,6 +2,7 @@
 title: "Introducing ds3-kv-cache-svc: A Fast, Local KV Cache for LLM Inference"
 date: "2026-07-02"
 author: "wangzq"
+categories: [tech]
 tags: ["rust", "llm", "kv-cache", "apple-silicon", "local-llm", "inference"]
 ---
 
